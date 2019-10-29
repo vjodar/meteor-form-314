@@ -16,6 +16,9 @@ const StudentFormSchema = new SimpleSchema({
   gpa: { label: 'GPA', type: String, allowedValues: gpaValues },
   major: { label: 'Major', type: String, allowedValues: DataValues.majors },
   enrolled: { label: 'Date Enrolled', type: Date, defaultValue: new Date() },
+  instructor: {
+    label: 'Instructor', type: String, allowedValues: DataValues.instructors, defaultValue: 'Philip Johnson',
+  },
 });
 
 export { StudentFormSchema, gpa2String, gpa2Number };
